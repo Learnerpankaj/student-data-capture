@@ -8,7 +8,7 @@ void main()
       ),
       body: Container(
         width: 120,
-        height: 110,
+        height: 120,
         color: Colors.blue[600],
       ),
     )

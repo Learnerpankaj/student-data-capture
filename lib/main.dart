@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'RegistrationPage.dart';
 void main()
 {
   runApp(const MaterialApp(
@@ -28,10 +29,19 @@ class HomePage extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: 10,
           children: [
-            Container(
+            GestureDetector(
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context)=> const RegistrationPage()),
+                );
+              },
+              child: Container(
               margin:const EdgeInsets.all(5),
               color: Colors.red, child: const Center(child: Text("Register"))
               ),
+            ),
+            
 
             Container(color: Colors.blue, child: const Center(child: Text("Verification"))),
             Container(color: Colors.green, child: const Center(child: Text("View"))),
